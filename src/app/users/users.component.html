@@ -1,0 +1,69 @@
+<!-- users -->
+<div>
+  <nz-breadcrumb>
+    <nz-breadcrumb-item>Dashboard</nz-breadcrumb-item>
+    <nz-breadcrumb-item>users</nz-breadcrumb-item>
+  </nz-breadcrumb>
+  <div class="page-inner-content">
+  <!--card-->
+    <div nz-row [nzGutter]="24">
+      <div nz-col [nzSpan]="24">
+        <nz-card [nzExtra]="tableFunctions" nzBorderless="true">
+          <ng-template #tableFunctions>
+            <div nz-row nzGutter="24">
+              <!-- user  -->
+              <div nz-col [nzSpan]="3">
+                <button nzTooltipTitle="Add new user"
+                nzTooltipPlacement="bottom"
+                nz-tooltip nz-button class="btn-success" nzGhost>
+                <i nz-icon nzType="user-add" nzTheme="outline"></i> Add
+              </button>
+              </div>
+              <!-- search -->
+              <div nz-col [nzSpan]="9">
+                <nz-input-group [nzSuffix]="suffixIconSearch">
+                  <input type="text" nz-input placeholder="search..." />
+                </nz-input-group>
+                <ng-template #suffixIconSearch>
+                  <i nz-icon nzType="search"></i>
+                </ng-template>
+              </div>
+              <!-- date picker -->
+              <div nz-col [nzSpan]="9">
+                <nz-range-picker (ngModelChange)="onChange($event)"></nz-range-picker>
+              </div>
+              <!-- export  -->
+              <div nz-col [nzSpan]="3">
+                <button nzTooltipTitle="Export to excel sheet"
+                nzTooltipPlacement="bottom"
+                nz-tooltip nz-button nzType="primary" nzGhost>
+                <i nz-icon nzType="export" nzTheme="outline"></i> Export
+              </button>
+              </div>
+            </div>
+          </ng-template>
+          <!-- table -->
+          <nz-table>
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Occupation</th>
+                <th>Gender</th>
+                <th>ID Type</th>
+                <th>ID Number</th>
+                <th>Date of Birth</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </nz-table>
+          <!-- end table -->
+        </nz-card>
+      </div>
+    </div>
+    <!-- end card -->
+  </div>
+</div>
+<!-- end users -->

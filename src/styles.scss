@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+// .ant-layout-sider {
+//   background: white;
+// }
+
+.ant-menu {
+  color: rgba(0, 0, 0, 0.85);
+  background: white;
+}
+
+.ant-menu-inline-collapsed {
+  width: 125px;
+}
+
+// .ant-layout-header {
+//   background: #497caa !important;
+// }
+
+.page-inner-content {
+  padding: 24px;
+  background: #fff;
+  min-height: 360px;
+}
+
+nz-breadcrumb {
+  margin: 16px 0 !important;
+}
+
+
+.btn-success{
+  border-color: green;
+  color: green;
+}
+
+.btn-success:hover, .btn-success:focus{
+  border-color: #09960991;
+  color: #09960991;
+}

@@ -1,22 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { en_US } from 'ng-zorro-antd/i18n';
-import { registerLocaleData } from '@angular/common';
-import en from '@angular/common/locales/en';
-import { NavigationComponent } from './navigation/navigation.component';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { ClientsRoutingModule } from './clients-routing.module';
+import { ClientsComponent } from './clients.component';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzInputModule } from 'ng-zorro-antd/input';
@@ -29,19 +21,11 @@ import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 
 
 
-registerLocaleData(en);
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavigationComponent
-  ],
+  declarations: [ClientsComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    ClientsRoutingModule,
     NzLayoutModule,
     NzBreadCrumbModule,
     NzMenuModule,
@@ -57,8 +41,7 @@ registerLocaleData(en);
     NzSpaceModule,
     NzCardModule,
     NzToolTipModule
-  ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
-  bootstrap: [AppComponent]
+
+  ]
 })
-export class AppModule { }
+export class ClientsModule { }

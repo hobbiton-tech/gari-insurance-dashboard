@@ -1,0 +1,68 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" [nzCollapsedWidth]="125" [nzWidth]="220">
+    <div class="logo">
+      <div nz-row nzJustify="center" nzAlign="middle">
+        <div nz-col nzSpan="24">
+          <img style="height: 54px;" src="../../assets/logos/gari_logo.png"/></div>
+        <div nz-col nzSpan="24"><p class="height-20">Insurance Dashboard</p></div>
+      </div>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="vertical">
+      <li nz-submenu nzTitle="Users" nzIcon="team">
+        <ul>
+          <li nz-menu-item (click)="this.naviagteTo('/dashboard/users')">Users</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Clients" nzIcon="team">
+        <ul>
+          <li nz-menu-item (click)="this.naviagteTo('/dashboard/clients')">Clients</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Vehicles" nzIcon="car">
+        <ul>
+          <li nz-menu-item>Vehicles management</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Policies" nzIcon="folder-open">
+        <ul>
+          <li nz-menu-item>Policy management</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Claims" nzIcon="folder-open">
+        <ul>
+          <li nz-menu-item>Claims management</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Queries" nzIcon="folder-open">
+        <ul>
+          <li nz-menu-item>Customer Queries management</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Agents" nzIcon="team">
+        <ul>
+          <li nz-menu-item>Agents management</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Notifications" nzIcon="notification">
+        <ul>
+          <li nz-menu-item>Broadcast</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Settungs" nzIcon="tool">
+        <ul>
+          <li nz-menu-item>Account</li>
+          <li nz-menu-item>Logout</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" (click)="isCollapsed = !isCollapsed"></i>
+    </nz-header>
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+    <nz-footer>Gari Insurance dashboard @ 2020.</nz-footer>
+  </nz-layout>
+</nz-layout>
